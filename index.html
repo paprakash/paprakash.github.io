@@ -55,8 +55,8 @@
   <div class="wrap">
     <a class="brand" href="#top">Pawan Prakash</a>
     <nav class="nav" aria-label="Sections">
-      <a href="#news" class="opt">News</a>
       <a href="#publications">Publications</a>
+      <a href="#news" class="opt">News</a>
       <a href="#talks" class="opt">Talks</a>
       <a href="#software" class="opt">Software</a>
       <a href="cv.pdf">CV</a>
@@ -114,20 +114,6 @@
     </div>
   </section>
 
-  <!-- ============ News ============ -->
-  <section id="news">
-    <h2>News</h2>
-    <ul class="news">
-      <li><time datetime="2026-09">Sep 2026</time><span>Submitted OMatGRPO, our work on reinforcement learning for crystal generators, for peer review.</span></li>
-      <li><time datetime="2026-08">Aug 2026</time><span>Finished a summer research internship at the Center for Nanophase Materials Sciences, ORNL, where I also gave an invited talk.</span></li>
-      <li><time datetime="2026-08">Aug 2026</time><span>Our UF3 benchmarking paper is on <a href="https://arxiv.org/abs/2608.27277">arXiv</a>.</span></li>
-      <li><time datetime="2026-05">May 2026</time><span><a href="https://doi.org/10.1038/s41524-026-02117-7">Guided diffusion for the discovery of new superconductors</a> is published in <em>npj Computational Materials</em>.</span></li>
-      <li><time datetime="2026-01">Jan 2026</time><span><a href="https://doi.org/10.1038/s41524-026-01964-8">Developing a complete AI-accelerated workflow for superconductor discovery</a> is published in <em>npj Computational Materials</em>.</span></li>
-      <li><time datetime="2025-12">Dec 2025</time><span>Spotlight talk on guided diffusion at the NeurIPS 2025 AI4Mat workshop in San Diego.</span></li>
-      <li><time datetime="2025-07">Jul 2025</time><span>Presented OMatG at ICML 2025 in Vancouver, and MolGuidance at the ICML GenBio workshop.</span></li>
-    </ul>
-  </section>
-
   <!-- ============ Publications ============ -->
   <section id="publications">
     <h2>Publications</h2>
@@ -154,12 +140,19 @@
     </article>
 
     <article class="pub first">
-      <div class="pub-thumb tile" aria-hidden="true"><span>OMatGRPO<small>Under review</small></span></div>
+      <a class="pub-thumb" href="https://arxiv.org/abs/2610.03880" aria-hidden="true" tabindex="-1">
+        <img src="assets/img/pubs/omatgrpo.webp" alt="" width="720" height="520">
+      </a>
       <div>
-        <h4>Reinforcement learning on the discrete composition channel of a crystal generator: validated gains and reward hacking</h4>
+        <h4><a href="https://arxiv.org/abs/2610.03880">Reinforcement learning on the discrete composition channel of a crystal generator: validated gains and reward hacking</a></h4>
         <p class="authors"><span class="me">P. Prakash</span>, P. Höllmer, A. Fuhr, P. J. Hirschfeld, P. Ganesh, S. Martiniani, R. G. Hennig</p>
-        <p class="venue">Under review (2026). Presented at the MRS Spring Meeting 2026.</p>
-        <p class="summary">We fine-tune the OMatG generator with group relative policy optimization, including its discrete species channel, using energy-above-hull rewards from a machine-learned potential. This raises the stable, unique and novel rate of the pretrained model from 13.4% to 45.5%. Along the way we found and closed a reward-hacking mode that games the standard stability metric, and we classify five ways that rewards from machine-learned potentials can be hacked.</p>
+        <p class="venue"><em>arXiv</em>:2610.03880 (2026), under review. Presented at the MRS Spring Meeting 2026.</p>
+        <p class="summary">We fine-tune the OMatG generator with group-relative policy optimization, with the policy gradient acting directly on its discrete atom-type transitions. Our reward raises the yield of metastable, unique and novel structures from 13.4% to 45.5% on a community benchmark. We also show that reinforcing atom types invites reward exploitation unless the reward has explicit guards, and that single-element structures inflate the benchmark metric without giving any new compounds.</p>
+        <ul class="plinks">
+          <li><a href="https://arxiv.org/abs/2610.03880">arXiv</a></li>
+          <li><a href="https://github.com/paprakash/OMatGRPO">Code</a></li>
+          <li><a href="https://huggingface.co/paprakash/OMatGRPO">Models and structures</a></li>
+        </ul>
       </div>
     </article>
 
@@ -253,6 +246,20 @@
     <p class="note">* Equal contribution. Full list on <a href="https://scholar.google.com/citations?user=CvLaEYYAAAAJ&amp;hl=en">Google Scholar</a>.</p>
   </section>
 
+  <!-- ============ News ============ -->
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news">
+      <li><time datetime="2026-10">Oct 2026</time><span>Our paper on reinforcement learning for crystal generators (OMatGRPO) is on <a href="https://arxiv.org/abs/2610.03880">arXiv</a>, with <a href="https://github.com/paprakash/OMatGRPO">code</a> and <a href="https://huggingface.co/paprakash/OMatGRPO">trained models</a>.</span></li>
+      <li><time datetime="2026-08">Aug 2026</time><span>Finished a summer research internship at the Center for Nanophase Materials Sciences, ORNL, where I also gave an invited talk.</span></li>
+      <li><time datetime="2026-08">Aug 2026</time><span>Our UF3 benchmarking paper is on <a href="https://arxiv.org/abs/2608.27277">arXiv</a>.</span></li>
+      <li><time datetime="2026-05">May 2026</time><span><a href="https://doi.org/10.1038/s41524-026-02117-7">Guided diffusion for the discovery of new superconductors</a> is published in <em>npj Computational Materials</em>.</span></li>
+      <li><time datetime="2026-01">Jan 2026</time><span><a href="https://doi.org/10.1038/s41524-026-01964-8">Developing a complete AI-accelerated workflow for superconductor discovery</a> is published in <em>npj Computational Materials</em>.</span></li>
+      <li><time datetime="2025-12">Dec 2025</time><span>Spotlight talk on guided diffusion at the NeurIPS 2025 AI4Mat workshop in San Diego.</span></li>
+      <li><time datetime="2025-07">Jul 2025</time><span>Presented OMatG at ICML 2025 in Vancouver, and MolGuidance at the ICML GenBio workshop.</span></li>
+    </ul>
+  </section>
+
   <!-- ============ Talks ============ -->
   <section id="talks">
     <h2>Talks and posters</h2>
@@ -261,6 +268,12 @@
         <h4>Generative AI for accelerated materials discovery and characterization</h4>
         <ul>
           <li><span class="when">2026</span><span>Center for Nanophase Materials Sciences, ORNL, Oak Ridge, TN<span class="tag">Invited talk</span></span></li>
+        </ul>
+      </div>
+      <div class="talk">
+        <h4>OMatGRPO: RL fine-tuning of a stochastic-interpolant crystal generator</h4>
+        <ul>
+          <li><span class="when">2026</span><span>MRS Spring Meeting, Hawaii</span></li>
         </ul>
       </div>
       <div class="talk">
@@ -310,6 +323,11 @@
         <span>Dataset released with the guided diffusion paper.</span>
         <code>huggingface.co/datasets/paprakash</code>
       </a>
+      <a class="card" href="https://github.com/paprakash/OMatGRPO">
+        <b>OMatGRPO</b>
+        <span>Reinforcement-learning fine-tuning of the OMatG crystal generator, with trained models on Hugging Face.</span>
+        <code>github.com/paprakash/OMatGRPO</code>
+      </a>
       <a class="card" href="https://github.com/FERMat-ML/OMatG">
         <b>OMatG</b>
         <span>Stochastic-interpolant framework for crystal structure prediction and de novo generation, in PyTorch Lightning.</span>
@@ -358,7 +376,7 @@
 <footer>
   <div class="wrap">
     <span>© <span id="year">2026</span> Pawan Prakash</span>
-    <span>Last updated September 2026</span>
+    <span>Last updated October 2026</span>
   </div>
 </footer>
 
